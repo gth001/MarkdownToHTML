@@ -4,7 +4,7 @@ A lightweight PHP-based website engine that converts markdown files into a beaut
 
 ## ⚠️ Disclaimer
 
-This code was entirely generated through AI (Claude-3.5-Sonnet) prompts. While I personally use this system in production, anyone else choosing to use this code does so entirely at their own risk. No warranty or guarantee is provided, and you should thoroughly review and test the code before using it in any production environment.
+This code was entirely generated through AI (Claude-3.5-Sonnet in Cursor IDE compose agent mode) prompts. While I personally use this system in production, anyone else choosing to use this code does so entirely at their own risk. No warranty or guarantee is provided, and you should thoroughly review and test the code before using it in any production environment.
 
 ## Features
 
