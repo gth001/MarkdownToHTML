@@ -34,11 +34,13 @@
 
 // Site Configuration
 $CONFIG = [
-    'site_title' => "EDITTHIS's Website",                    // Default title for homepage
     'markdown_dir' => __DIR__ . '/markdown',               // Directory containing markdown files
-    'media_base_url' => 'https://EDITTHIS.COM/markdown',     // Base URL for media files
     'debug_mode' => false                                  // Set to true to enable debug logging
 ];
+
+// Optional settings with fallbacks
+$CONFIG['site_title'] = $CONFIG['site_title'] ?? 'Markdown Site';  // Default title if not set
+$CONFIG['media_base_url'] = $CONFIG['media_base_url'] ?? '';      // Empty base URL will make media links relative
 
 // Enable error reporting based on debug mode
 error_reporting($CONFIG['debug_mode'] ? E_ALL : 0);
@@ -92,10 +94,13 @@ function renderMarkdown($markdown, $config) {
         $encoded = rawurlencode($filename);
         $style = $width ? "width: {$width}px; height: auto;" : "max-width: 100%; height: auto;";
         
+        // Use root-relative path if no media_base_url is set
+        $mediaPath = $config['media_base_url'] ? $config['media_base_url'] : '/markdown';
+        
         if (str_ends_with(strtolower($filename), '.mp4')) {
-            return '<video controls style="' . $style . '"><source src="' . $config['media_base_url'] . '/share/' . $encoded . '" type="video/mp4">Your browser does not support the video tag.</video>';
+            return '<video controls style="' . $style . '"><source src="' . $mediaPath . '/share/' . $encoded . '" type="video/mp4">Your browser does not support the video tag.</video>';
         } else {
-            return '<img src="' . $config['media_base_url'] . '/share/' . $encoded . '" alt="" style="' . $style . '">';
+            return '<img src="' . $mediaPath . '/share/' . $encoded . '" alt="" style="' . $style . '">';
         }
     }, $markdown);
 
