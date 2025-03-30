@@ -1,6 +1,6 @@
 # Simple Markdown Website Engine
 
-A lightweight PHP-based website engine that converts markdown files into a beautiful, responsive website. Perfect for personal wikis, documentation sites, or simple blogs.
+A website engine that converts markdown files (specifically from an Obsidian vault folder) into an HTML website. It uses https://parsedown.org/ at it's core, and adds image, video, and `[[wiki]]` style linking.
 
 ## ⚠️ Disclaimer
 
