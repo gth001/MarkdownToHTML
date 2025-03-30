@@ -1,4 +1,4 @@
-# Simple Markdown Website Engine
+# George's Website Renderer
 
 A website engine that converts markdown files (specifically from an Obsidian vault folder) into an HTML website. It uses https://parsedown.org/ at it's core, and adds image, video, and `[[wiki]]` style linking.
 
