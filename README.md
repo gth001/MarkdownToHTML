@@ -1,6 +1,8 @@
 # George's Website Renderer
 
-A website engine that converts markdown files (specifically from an Obsidian vault folder) into an HTML website. It uses https://parsedown.org/ at it's core, and adds image, video, and `[[wiki]]` style linking. It's similar to this https://4rkal.com/posts/obsidianhugo/ , but I didn't like how Hugo worked so I made my own.
+I made this because I wanted it to be a lot easier to edit my website. Markdown is the quickest way to write things, so why not edit the website with that.
+
+This PHP converts markdown files on the fly (specifically from an Obsidian vault folder) into an HTML website. It uses https://parsedown.org/ at it's core, and adds image, video, and `[[wiki]]` style linking. It's similar to this https://4rkal.com/posts/obsidianhugo/ , but I didn't like how Hugo worked so I made my own.
 
 ## ⚠️ Disclaimer
 
